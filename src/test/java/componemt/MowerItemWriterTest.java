@@ -25,10 +25,8 @@ public class MowerItemWriterTest {
 
     @BeforeEach
     public void setup() throws IOException {
-        // Mock the Resource object for the output file
         mockResource = Mockito.mock(Resource.class);
 
-        // Create the directory if it doesn't exist
         Path testOutputDir = Paths.get("src/test/resources");
         if (Files.notExists(testOutputDir)) {
             Files.createDirectories(testOutputDir);
